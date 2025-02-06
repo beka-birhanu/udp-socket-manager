@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/beka-birhanu/udp-socket-manager/crypto"
+	encoding "github.com/beka-birhanu/udp-socket-manager/encoding"
 	udp "github.com/beka-birhanu/udp-socket-manager/socket"
-	udppb "github.com/beka-birhanu/udp-socket-manager/udp"
 	"github.com/google/uuid"
 )
 
@@ -42,7 +42,7 @@ func main() {
 		Authenticator: &a{},
 		AsymmCrypto:   rsaEnc,
 		SymmCrypto:    crypto.NewAESCBC(),
-		Encoder:       &udppb.Protobuf{},
+		Encoder:       &encoding.Protobuf{},
 		HMAC:          &crypto.HMAC{},
 		Logger:        &Logger{prefix: "@Server Socket@------@"},
 	},
@@ -55,7 +55,7 @@ func main() {
 	client, _ := udp.NewClientServerManager(
 		udp.ClientConfig{
 			ServerAddr:         serverAddr,
-			Encoder:            &udppb.Protobuf{},
+			Encoder:            &encoding.Protobuf{},
 			AsymmCrypto:        crypto.NewRSA(asymm),
 			ServerAsymmPubKey:  rsaEnc.GetPublicKey(),
 			SymmCrypto:         crypto.NewAESCBC(),
@@ -75,7 +75,7 @@ func main() {
 	client2, _ := udp.NewClientServerManager(
 		udp.ClientConfig{
 			ServerAddr:         serverAddr,
-			Encoder:            &udppb.Protobuf{},
+			Encoder:            &encoding.Protobuf{},
 			AsymmCrypto:        crypto.NewRSA(asymm),
 			ServerAsymmPubKey:  rsaEnc.GetPublicKey(),
 			SymmCrypto:         crypto.NewAESCBC(),
