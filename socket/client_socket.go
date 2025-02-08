@@ -154,7 +154,7 @@ func (c *ClientSocketManager) Connect() error {
 				c.logger.Error(fmt.Sprintf("while reading from udp: %s", err))
 				continue
 			} else if n > c.readBufferSize {
-				c.logger.Error(ErrMaximumPayloadSizeLimit.Error())
+				c.logger.Warning(ErrMaximumPayloadSizeLimit.Error())
 				continue
 			}
 			c.rawRecords <- rawRecord{
@@ -186,7 +186,7 @@ func (c *ClientSocketManager) handleRawRecords() {
 // handleRawRecord processes incoming raw records and takes action based on their type.
 func (c *ClientSocketManager) handleRawRecord(payload []byte) {
 	if len(payload) < minimumPayloadSize {
-		c.logger.Error(ErrMinimumPayloadSizeLimit.Error())
+		c.logger.Warning(ErrMinimumPayloadSizeLimit.Error())
 		return
 	}
 

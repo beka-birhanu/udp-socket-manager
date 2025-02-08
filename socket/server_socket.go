@@ -188,7 +188,7 @@ func (s *ServerSocketManager) Serve() {
 				s.logger.Error(fmt.Sprintf("while reading from udp: %s", err))
 				continue
 			} else if n > s.readBufferSize {
-				s.logger.Error(fmt.Sprintf("while reading from udp: %s", ErrMaximumPayloadSizeLimit))
+				s.logger.Warning(fmt.Sprintf("while reading from udp: %s", ErrMaximumPayloadSizeLimit))
 				continue
 			}
 			s.rawRecords <- rawRecord{
@@ -455,7 +455,7 @@ func (s *ServerSocketManager) sayServerHello(addr *net.UDPAddr, h socket_i.Hands
 		return
 	}
 
-	s.logger.Error(fmt.Sprintf("accepted connection with client: %s", ID))
+	s.logger.Info(fmt.Sprintf("accepted connection with client: %s", ID))
 }
 
 // registerClient generates a new session ID & registers an address with client ID & encryption key as a Client
