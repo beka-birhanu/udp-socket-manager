@@ -7,8 +7,8 @@ import (
 	"net"
 	"time"
 
-	general_i "github.com/beka-birhanu/vinom-interfaces/general"
-	socket_i "github.com/beka-birhanu/vinom-interfaces/socket"
+	general_i "github.com/beka-birhanu/vinom-common/interfaces/general"
+	socket_i "github.com/beka-birhanu/vinom-common/interfaces/socket"
 )
 
 type ClientOption func(*ClientSocketManager)

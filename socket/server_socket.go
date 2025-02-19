@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	general_i "github.com/beka-birhanu/vinom-interfaces/general"
-	socket_i "github.com/beka-birhanu/vinom-interfaces/socket"
+	general_i "github.com/beka-birhanu/vinom-common/interfaces/general"
+	socket_i "github.com/beka-birhanu/vinom-common/interfaces/socket"
 	"github.com/google/uuid"
 )
 

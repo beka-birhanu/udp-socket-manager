@@ -1,5 +1,5 @@
-github.com/beka-birhanu/vinom-interfaces v0.0.0-20250206081607-590b9b837c0a h1:aprOXQzaQFP8pE9NJH3tJXGbi830E8PZnj4kacXWHz0=
-github.com/beka-birhanu/vinom-interfaces v0.0.0-20250206081607-590b9b837c0a/go.mod h1:riTs7QpVdiowdD9mWGLAYmQ5v0rguVIBzEo993rSTrQ=
+github.com/beka-birhanu/vinom-common v0.0.0-20250219120723-29393b8d60dc h1:83k4YYwUOFZhnF/IUosVGfY05U9bGezwbTyEK/3zEl0=
+github.com/beka-birhanu/vinom-common v0.0.0-20250219120723-29393b8d60dc/go.mod h1:5YQ9WWSIzfDCIeVls/RtHOZTIFrjhdAcxPQuvJQhjfE=
 github.com/google/go-cmp v0.5.5 h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=
 github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=

@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"net"
 
-	socket_i "github.com/beka-birhanu/vinom-interfaces/socket"
+	socket_i "github.com/beka-birhanu/vinom-common/interfaces/socket"
 	"github.com/google/uuid"
 )
 
