@@ -4,14 +4,14 @@ import (
 	"crypto/rand"
 	"net"
 
-	socket_i "github.com/beka-birhanu/vinom-common/interfaces/socket"
+	socket_i "github.com/beka-birhanu/vinom/common/interfaces/socket"
 	"github.com/google/uuid"
 )
 
 // SessionManager a struct to manage sessions secrets
 type SessionManager struct {
-	sHMACKey []byte //session random key
-	cHMACKey []byte //cookie random key
+	sHMACKey []byte // session random key
+	cHMACKey []byte // cookie random key
 	HMAC     socket_i.HMAC
 }
 

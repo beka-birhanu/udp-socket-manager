@@ -3,13 +3,11 @@ package udppb
 import (
 	"errors"
 
-	socket_i "github.com/beka-birhanu/vinom-common/interfaces/socket"
+	socket_i "github.com/beka-birhanu/vinom/common/interfaces/socket"
 	"google.golang.org/protobuf/proto"
 )
 
-var (
-	errInvalidProtobufMessage = errors.New("invalid protobuf message")
-)
+var errInvalidProtobufMessage = errors.New("invalid protobuf message")
 
 type Protobuf struct{}
 

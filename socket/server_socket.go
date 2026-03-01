@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	general_i "github.com/beka-birhanu/vinom-common/interfaces/general"
-	socket_i "github.com/beka-birhanu/vinom-common/interfaces/socket"
+	general_i "github.com/beka-birhanu/vinom/common/interfaces/general"
+	socket_i "github.com/beka-birhanu/vinom/common/interfaces/socket"
 	"github.com/google/uuid"
 )
 
@@ -198,6 +198,7 @@ func (s *ServerSocketManager) Serve() {
 		}
 	}
 }
+
 func (s *ServerSocketManager) Stop() {
 	s.logger.Info("server stoping gracefuly...")
 	defer s.logger.Info("server stoped")
